@@ -3,8 +3,8 @@ import { ButtonTheme as Button } from "./Components";
 
 
 const config: ThemeConfig = {
-	initialColorMode: 'light',
-	useSystemColorMode: false,
+	initialColorMode: 'dark',
+	useSystemColorMode: true,
   }
 
 export const theme = extendTheme({

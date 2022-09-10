@@ -1,4 +1,4 @@
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
 import React from "react";
 import { Suspense } from "react";
 import ReactDOM from "react-dom/client";
@@ -13,6 +13,9 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 	<React.StrictMode>
 		<Suspense fallback={<Spinner />}>
 			<ChakraProvider theme={theme}>
+				<ColorModeScript
+					initialColorMode={theme.config.initialColorMode}
+				/>
 				<Global styles={GlobalStyles} />
 				<App />
 			</ChakraProvider>

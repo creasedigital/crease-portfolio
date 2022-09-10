@@ -1,13 +1,21 @@
 import { useColorMode, Button } from "@chakra-ui/react";
+import { TiWeatherNight, TiWeatherSunny } from "react-icons/ti";
 
 function ColorToggler() {
 	const { colorMode, toggleColorMode } = useColorMode();
 	return (
-		<header>
-			<Button onClick={toggleColorMode}>
-				Toggle {colorMode === "light" ? "Dark" : "Light"}
-			</Button>
-		</header>
+		<Button
+			onClick={toggleColorMode}
+			_active={{ border: "none", outline: "none" }}
+			_focus={{ border: "none", outline: "none" }}
+			display="block"
+			/* pos="absolute"
+			top="0"
+			left="0" */
+			m="1rem"
+		>
+			{colorMode === "light" ? <TiWeatherNight /> : <TiWeatherSunny />}
+		</Button>
 	);
 }
 
