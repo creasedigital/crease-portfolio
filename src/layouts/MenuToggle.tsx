@@ -2,7 +2,7 @@ import { Box } from "@chakra-ui/react";
 import { TiTimes, TiThMenu } from "react-icons/ti";
 
 interface IMenuToggle {
-	toggle: string;
+	toggle: () => void;
 	isOpen: boolean;
 }
 
