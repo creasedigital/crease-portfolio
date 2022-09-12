@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/react";
-import ColorToggler from "../components/ColorToggler";
+import ColorToggler from "../../components/ColorToggler";
 
 const Home = () => {
 	return (
