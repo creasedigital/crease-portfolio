@@ -9,6 +9,17 @@ const NavBarContainer: React.FC<INavBarContainer> = ({
 	children,
 	...props
 }) => {
-	return <Flex>{children}</Flex>;
+	return <Flex
+    as="nav"
+    align="center"
+    justify="space-between"
+    wrap="wrap"
+    w="100%"
+    mb={8}
+    p={8}
+    // bg={[]}
+    // color={[]}
+    {...props   }
+    >{children}</Flex>;
 };
 export default NavBarContainer;
