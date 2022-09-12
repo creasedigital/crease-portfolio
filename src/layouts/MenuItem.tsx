@@ -2,9 +2,9 @@ import { Link, Text } from "@chakra-ui/react";
 
 interface IMenuItem {
 	children: string;
-	isLast: boolean;
+	isLast?: boolean;
 	to: string;
-	rest: any;
+	rest?: any;
 }
 
 const MenuItem: React.FC<IMenuItem> = ({
