@@ -118,4 +118,4 @@ const links: {title:string, to:string}[] = [
     },
 ]
 
-export {sideProjects, links}
+export {sideProjects, liveProjects, links}
