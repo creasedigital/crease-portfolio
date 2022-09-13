@@ -1,4 +1,5 @@
-import { Link, Text } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 interface IMenuItem {
 	children: string;
@@ -14,7 +15,7 @@ const MenuItem: React.FC<IMenuItem> = ({
 	...rest
 }) => {
 	return (
-		<Link href={to}>
+		<Link to={to}>
 			<Text display="block" {...rest}>
 				{children}
 			</Text>
