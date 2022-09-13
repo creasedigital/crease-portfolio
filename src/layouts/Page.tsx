@@ -8,7 +8,9 @@ const Page = () => {
 		<Box minHeight={"100vh"}>
 			<ColorToggler />
 			<Navbar />
-			<Outlet />
+			<Box px={8}>
+				<Outlet />
+			</Box>
 		</Box>
 	);
 };
