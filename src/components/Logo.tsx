@@ -1,5 +1,6 @@
 import { Box, ChakraProps, OmitCommonProps, Text } from "@chakra-ui/react";
 import { DetailedHTMLProps, HTMLAttributes } from "react";
+import { Link } from "react-router-dom";
 
 export default function Logo(
 	props: JSX.IntrinsicAttributes &
@@ -11,9 +12,11 @@ export default function Logo(
 ) {
 	return (
 		<Box {...props}>
-			<Text fontSize="lg" fontWeight={"bold"}>
-				Ojore_Chris
-			</Text>
+			<Link to="/">
+				<Text fontSize="lg" fontWeight={"bold"}>
+					Ojore_Chris
+				</Text>
+			</Link>
 		</Box>
 	);
 }

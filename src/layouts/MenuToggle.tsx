@@ -8,7 +8,13 @@ interface IMenuToggle {
 
 const MenuToggle: React.FC<IMenuToggle> = ({ toggle, isOpen }) => {
 	return (
-		<Box display={{ base: "block", md: "none" }}>
+		<Box
+			as="button"
+			_focus={{ border: "none", outline: "none" }}
+			_active={{ border: "none", outline: "none" }}
+			onClick={toggle}
+			display={{ base: "block", md: "none" }}
+		>
 			{isOpen ? <TiTimes /> : <TiThMenu />}
 		</Box>
 	);

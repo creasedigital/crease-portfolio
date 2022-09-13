@@ -1,3 +1,4 @@
+import { Box } from "@chakra-ui/react";
 import Logo from "components/Logo";
 import { useState } from "react";
 import MenuLinks from "../MenuLinks";
@@ -9,11 +10,13 @@ const NavBar = (props: any) => {
 	const toggle = () => setIsOpen(!isOpen);
 
 	return (
-		<NavBarContainer {...props}>
-			<Logo w="100px" />
-			<MenuToggle toggle={toggle} isOpen={isOpen} />
-			<MenuLinks isOpen={isOpen} />
-		</NavBarContainer>
+		<Box>
+			<NavBarContainer {...props}>
+				<Logo w="100px" />
+				<MenuToggle toggle={toggle} isOpen={isOpen} />
+				<MenuLinks isOpen={isOpen} />
+			</NavBarContainer>
+		</Box>
 	);
 };
 export default NavBar;
