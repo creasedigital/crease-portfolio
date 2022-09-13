@@ -118,4 +118,31 @@ const links: {title:string, to:string}[] = [
     },
 ]
 
-export {sideProjects, liveProjects, links}
+const loveStatements: {love: string, reason: string}[] = [
+    {
+        love: "I'm in love with knowledge",
+        reason: "I want to know more",
+    },
+    {
+        love: "I love executing what I already know",
+        reason: "This way I practice to perfection",
+    },
+    {
+        love: "I love beautiful designs",
+        reason: "It inspires me to build more products",
+    },{
+        love: "I love challenging projects",
+        reason: "It is stressful but it helps me get better",
+    },{
+        love: "I love collaboration and team work",
+        reason: "It gives me an opportunity to express my ideas, add values and learn",
+    },{
+        love: "I love expressing positive vibes",
+        reason: "This way I maintain a positive energy",
+    },{
+        love: "I love to give more than 100%",
+        reason: "This way I leave an indelible mark",
+    },
+]
+
+export {sideProjects, liveProjects, links, loveStatements}
