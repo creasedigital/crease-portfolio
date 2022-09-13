@@ -1,4 +1,5 @@
 import { Box, Heading, Text } from "@chakra-ui/react";
+import { loveStatements } from "data";
 
 const About = () => {
 	return (
@@ -7,7 +8,14 @@ const About = () => {
 				I will tell you an open secret <Box as="span">about me.</Box>I
 				am all about <Box as="span">LOVE</Box>
 			</Heading>
-			<Box></Box>
+			<Box>
+				{loveStatements.map((item, idx) => (
+					<Box key={idx}>
+						<Text>{item.love}</Text>
+						<Text>{item.reason}</Text>
+					</Box>
+				))}
+			</Box>
 			<Heading>
 				What do you <Box as="span">LOVE?</Box>
 			</Heading>
