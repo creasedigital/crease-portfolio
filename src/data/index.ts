@@ -1,4 +1,13 @@
 import CREASE from "assets/imgs/crease.jpg"
+import MAINSTACK from "assets/imgs/1_mainstack.jpg"
+import FIXAM from "assets/imgs/2_fixam.jpg"
+import UNBOXD from "assets/imgs/3_unboxd.jpg"
+import GACA from "assets/imgs/4_gaca.jpg"
+import ADROSOL from "assets/imgs/s1_adrosol.jpg"
+import DASHBOARD from "assets/imgs/s2_dashboard.jpg"
+import CLOUDBANK from "assets/imgs/s3_cloudbank.jpg"
+import GITHUBUSER from "assets/imgs/s4_github.jpg"
+
 
 interface ISideProjects{
     id: number;
