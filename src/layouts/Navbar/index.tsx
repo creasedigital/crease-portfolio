@@ -10,7 +10,7 @@ const NavBar = (props: any) => {
 	const toggle = () => setIsOpen(!isOpen);
 
 	return (
-		<Box>
+		<Box mx="auto" maxWidth={"1100px"}>
 			<NavBarContainer {...props}>
 				<Logo w="100px" />
 				<MenuToggle toggle={toggle} isOpen={isOpen} />

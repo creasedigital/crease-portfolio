@@ -1,17 +1,29 @@
 import { Box, Text } from "@chakra-ui/react";
-import Navbar from "layouts/Navbar";
-import ColorToggler from "../../components/ColorToggler";
+import TypeWriter from "typewriter-effect";
 
 const Home = () => {
 	return (
-		<Box>
+		<Box fontSize="1.6rem">
 			<Text>
 				I consider myself an extraordinary react developer with an eye
 				for a pixel-perfect and bug free production-level development.
 			</Text>
 			<Text>
-				Every web application should be functional, aesthetically
-				pleasing, responsive and optimized for performance.
+				Every web application should be
+				<Box color="red.500" fontSize="2rem" as="span">
+					<TypeWriter
+						options={{
+							strings: [
+								"functional,",
+								"aesthetically pleasing,",
+								"responsive,",
+								"and optimized for performance.",
+							],
+							autoStart: true,
+							loop: true,
+						}}
+					/>
+				</Box>
 			</Text>
 		</Box>
 	);

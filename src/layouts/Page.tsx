@@ -5,10 +5,10 @@ import Navbar from "./Navbar";
 
 const Page = () => {
 	return (
-		<Box minHeight={"100vh"}>
+		<Box minHeight={"100vh"} mx="auto">
 			<ColorToggler />
 			<Navbar />
-			<Box px={8}>
+			<Box px={8} mx="auto" maxWidth={"1100px"}>
 				<Outlet />
 			</Box>
 		</Box>
