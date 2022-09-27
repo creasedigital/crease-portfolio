@@ -12,9 +12,13 @@ function ColorToggler() {
 			/* pos="absolute"
 			top="0"
 			left="0" */
-			m="1rem"
+			// m="1rem"
 		>
-			{colorMode === "light" ? <TiWeatherNight /> : <TiWeatherSunny />}
+			{colorMode === "light" ? (
+				<TiWeatherNight size={32} />
+			) : (
+				<TiWeatherSunny size={32} />
+			)}
 		</Button>
 	);
 }

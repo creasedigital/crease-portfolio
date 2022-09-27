@@ -25,8 +25,8 @@ export const theme = extendTheme({
 		blackGray: "#1F2A35",
 	},
 	fonts: {
-		heading: `Söhne Breit, ${baseTheme.fonts?.heading}`,
-		body: `Söhne Breit, ${baseTheme.fonts?.body}`,
+		heading: `Playfair Display, ${baseTheme.fonts?.heading}`,
+		body: `Poppins, ${baseTheme.fonts?.body}`,
 	},
 	components: {
 		Button,

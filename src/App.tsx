@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, useColorModeValue } from "@chakra-ui/react";
 import Page from "layouts/Page";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import About from "views/About";
@@ -8,8 +8,11 @@ import { ROUTES } from "./utils/routes";
 import Home from "./views/Home";
 
 function App() {
+	const bg = useColorModeValue("gray.200", "slate.900");
+	const color = useColorModeValue("gray.500", "green.100");
+
 	return (
-		<Box>
+		<Box color={color} bg={bg} m="0px">
 			<BrowserRouter>
 				<Routes>
 					<Route path={ROUTES.home} element={<Page />}>
