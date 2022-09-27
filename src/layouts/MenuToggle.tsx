@@ -15,7 +15,7 @@ const MenuToggle: React.FC<IMenuToggle> = ({ toggle, isOpen }) => {
 			onClick={toggle}
 			display={{ base: "block", md: "none" }}
 		>
-			{isOpen ? <TiTimes /> : <TiThMenu />}
+			{isOpen ? <TiTimes size={32} /> : <TiThMenu size={32} />}
 		</Box>
 	);
 };

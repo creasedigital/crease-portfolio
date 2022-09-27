@@ -16,7 +16,12 @@ const MenuItem: React.FC<IMenuItem> = ({
 }) => {
 	return (
 		<Link to={to}>
-			<Text display="block" {...rest} textTransform="capitalize">
+			<Text
+				display="block"
+				fontSize={"1.4rem"}
+				{...rest}
+				textTransform="capitalize"
+			>
 				{children}
 			</Text>
 		</Link>

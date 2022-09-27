@@ -29,7 +29,7 @@ const Home = () => {
 					fontSize={{ base: "4rem", sm: "6.4rem" }}
 					lineHeight={{ base: "4.4rem", sm: "7.2rem" }}
 					letterSpacing="150%"
-					mb={"3.2rem"}
+					mb={{ base: "2rem", md: "3.2rem" }}
 				>
 					Frontend Developer
 				</Heading>
@@ -75,7 +75,7 @@ const Home = () => {
 					w="100%"
 					h="auto"
 					flex={"1"}
-					bg={cBlue}
+					bg={cLightBg}
 					borderRadius="50%"
 					outline={`10px solid ${cLightBlue}`}
 					outlineOffset="2rem"
