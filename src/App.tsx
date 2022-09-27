@@ -6,10 +6,12 @@ import Contact from "views/Contact";
 import Projects from "views/Projects";
 import { ROUTES } from "./utils/routes";
 import Home from "./views/Home";
+import Colors from "constants/Colors";
 
 function App() {
-	const bg = useColorModeValue("gray.200", "slate.900");
-	const color = useColorModeValue("gray.500", "green.100");
+	const { cLightBg, cDarkBg, cDarkGrey, cLightGreen } = Colors;
+	const bg = useColorModeValue(cLightBg, cDarkBg);
+	const color = useColorModeValue(cDarkGrey, cLightGreen);
 
 	return (
 		<Box color={color} bg={bg} m="0px">
