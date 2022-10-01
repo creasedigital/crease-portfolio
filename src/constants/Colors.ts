@@ -4,7 +4,7 @@ const Colors = {
     white: '#fff',
     cBlue: '#287194',
     cBlueHoverTrans: 'rgba(235, 84, 84, 0.1)',
-    cLightBlue: '#FFA3A3',
+    cLightBlue: '#FF8000',
     cGreen: '#44A560',
     cGreenHover: '#338149',
     cGreenHoverTrans: 'rgba(68, 165, 96, 0.1)',

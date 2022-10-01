@@ -8,6 +8,8 @@ import {
 	ListIcon,
 	useColorMode,
 	IconButton,
+	Image,
+	textDecoration,
 } from "@chakra-ui/react";
 import Colors from "constants/Colors";
 import {
@@ -18,6 +20,7 @@ import {
 	TiSocialLinkedin,
 	TiSocialTwitter,
 } from "react-icons/ti";
+import SMILES from "assets/svgs/emojione-v1_smiling-face-with-heart-eyes.svg";
 
 const Contact = () => {
 	const {
@@ -34,44 +37,43 @@ const Contact = () => {
 	return (
 		<Box>
 			<Heading
-				fontSize={{ base: "4rem", sm: "6.4rem" }}
-				lineHeight={{ base: "4.4rem", sm: "7.2rem" }}
+				fontSize={{ base: "2rem", sm: "2.4rem" }}
+				lineHeight={{ base: "2.4rem", sm: "3.2rem" }}
 				letterSpacing="150%"
 				mb={{ base: "2rem", md: "3.2rem" }}
-				width="100%"
-				maxWidth="1000rem"
 			>
 				Let's Talk?
-				<br /> Contact{" "}
-				<Box
-					cursor="pointer"
-					onClick={() => console.log("hello")}
-					as="span"
-				>
-					Me
-				</Box>
 			</Heading>
-			<Box id="contact">
+
+			<Heading
+				cursor="pointer"
+				onClick={() => console.log("hello")}
+				as="span"
+				fontSize={{ base: "4rem", sm: "4.4rem" }}
+				lineHeight={{ base: "4.4rem", sm: "4.8rem" }}
+				letterSpacing="150%"
+				mb={{ base: "2rem", md: "3.2rem" }}
+			>
+				Contact Me
+			</Heading>
+			<Box my="2rem">
+				<Image src={SMILES} alt="" />
+			</Box>
+			<Box id="contact" mt="2">
 				<List
 					fontSize={{ base: "2rem", sm: "2.4rem" }}
 					fontWeight="100"
 				>
 					<ListItem color={cLightBlue} _hover={{ color: cBlue }}>
-						<ListIcon as={TiMail} size={24} color="facebook" />
-						<a href="mailto:ojorechris@gmail.com">
-							Email: ojorechris@gmail.com
-						</a>
+						<ListIcon as={TiMail} size={24} />
+						<span>Email: ojorechris@gmail.com</span>
 					</ListItem>
 					<ListItem
 						mt="2rem"
 						color={cLightBlue}
 						_hover={{ color: cBlue }}
 					>
-						<ListIcon
-							as={TiDevicePhone}
-							size={24}
-							color="facebook"
-						/>
+						<ListIcon as={TiDevicePhone} size={24} />
 						Mobile: +2348037598785
 					</ListItem>
 					<ListItem

@@ -68,7 +68,7 @@ const sideProjects: ISideProjects[] = [
 ]
 
 // live projects
-const liveProjects: ILiveProjects[] = [
+const liveProjects: ILiveProjects[] = [ 
     {
         id: 41,
         img: MAINSTACK,
