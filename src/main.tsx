@@ -9,7 +9,12 @@ import { theme } from "./theme/BaseTheme";
 import { GlobalStyles } from "./theme/GlobalStyles";
 import { Global } from "@emotion/react";
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+const container = document.getElementById("root");
+if (!container) throw new Error("Failed to find the root element");
+const root = ReactDOM.createRoot(container);
+
+// ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+root.render(
 	<React.StrictMode>
 		<Suspense fallback={<Spinner />}>
 			<ChakraProvider theme={theme}>
