@@ -2,8 +2,14 @@ import { Box, Heading, Text, useColorMode } from "@chakra-ui/react";
 import Colors from "constants/Colors";
 import { loveStatements } from "data";
 import TypeWriter from "typewriter-effect";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const About = () => {
+	useEffect(() => {
+		Aos.init({ duration: 2000 });
+	}, []);
 	const {
 		cLightBg,
 		cLightBlue,
@@ -39,8 +45,26 @@ const About = () => {
 			<Box>
 				{loveStatements.map((item, idx) => (
 					<Box key={idx}>
-						<Text>{item.love}</Text>
-						<Text>{item.reason}</Text>
+						<Text
+							fontSize={{ base: "2rem", sm: "2.4rem" }}
+							lineHeight={{ base: "2.4rem", sm: "3.2rem" }}
+							letterSpacing="150%"
+							mb={{ base: "2rem", md: "3.2rem" }}
+							data-aos="fade-right"
+						>
+							{item.love}
+						</Text>
+						<Text
+							fontSize={{ base: "2rem", sm: "2.4rem" }}
+							lineHeight={{ base: "2.4rem", sm: "3.2rem" }}
+							letterSpacing="150%"
+							mb={{ base: "2rem", md: "3.2rem" }}
+							data-aos="fade-right"
+							data-aos-offset="300"
+							data-aos-easing="ease-in-sine"
+						>
+							{item.reason}
+						</Text>
 					</Box>
 				))}
 			</Box>

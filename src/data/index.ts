@@ -129,27 +129,27 @@ const links: {title:string, to:string}[] = [
 
 const loveStatements: {love: string, reason: string}[] = [
     {
-        love: "I'm in love with knowledge",
+        love: "I'm in 💙 with knowledge",
         reason: "I want to know more",
     },
     {
-        love: "I love executing what I already know",
+        love: "I 💙 executing what I already know",
         reason: "This way I practice to perfection",
     },
     {
-        love: "I love beautiful designs",
+        love: "I 💙 beautiful designs",
         reason: "It inspires me to build more products",
     },{
-        love: "I love challenging projects",
+        love: "I 💙 challenging projects",
         reason: "It is stressful but it helps me get better",
     },{
-        love: "I love collaboration and team work",
+        love: "I 💙 collaboration and team work",
         reason: "It gives me an opportunity to express my ideas, add values and learn",
     },{
-        love: "I love expressing positive vibes",
+        love: "I 💙 expressing positive vibes",
         reason: "This way I maintain a positive energy",
     },{
-        love: "I love to give more than 100%",
+        love: "I 💙 to give more than 100%",
         reason: "This way I leave an indelible mark",
     },
 ]
