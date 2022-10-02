@@ -22,16 +22,16 @@ const Home = () => {
 	const color = useColorModeValue("cDarkGrey", "cBlue");
 	const { colorMode } = useColorMode();
 
-	const particlesInit = useCallback(async (engine: Engine) => {
+	const particlesInit: any = useCallback(async (engine: Engine) => {
 		// you can initialize the tsParticles instance (engine) here, adding custom shapes or presets
 		// this loads the tsparticles package bundle, it's the easiest method for getting everything ready
 		// starting from v2 you can add only the features you need reducing the bundle size
 		await loadFull(engine);
 	}, []);
 
-	const particlesLoaded = useCallback(
+	const particlesLoaded: any = useCallback(
 		async (container: Container | undefined) => {
-			await console.log(container);
+			await console.log("container");
 		},
 		[],
 	);
@@ -40,7 +40,7 @@ const Home = () => {
 		<>
 			<Particles
 				id="tsparticles"
-				init={particlesInit}
+				init={() => particlesInit}
 				loaded={particlesLoaded}
 				options={{
 					background: {

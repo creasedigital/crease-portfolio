@@ -1,6 +1,7 @@
 import { Box, Heading, Text, useColorMode } from "@chakra-ui/react";
 import Colors from "constants/Colors";
 import { loveStatements } from "data";
+import TypeWriter from "typewriter-effect";
 
 const About = () => {
 	const {
@@ -16,18 +17,25 @@ const About = () => {
 
 	return (
 		<Box p={"4rem"}>
-			<Heading
-				fontSize={{ base: "4rem", sm: "6.4rem" }}
-				lineHeight={{ base: "4.4rem", sm: "7.2rem" }}
-				letterSpacing="150%"
-				mb={{ base: "2rem", md: "3.2rem" }}
-				width="100%"
-				maxWidth="1000rem"
-				textAlign="center"
+			<Box
+				// color={colorMode === "light" ? "cDarkBg" : "cBlue"}
+				fontSize="2rem"
+				as="span"
 			>
-				I will tell you an open secret <Box as="span">about me.</Box>I
-				am all about <Box as="span">LOVE</Box>
-			</Heading>
+				<TypeWriter
+					options={{
+						strings: [
+							"I will tell you an open secret",
+							"about me.",
+							"I am all about",
+							"💙",
+						],
+						autoStart: true,
+						loop: true,
+					}}
+				/>
+			</Box>
+
 			<Box>
 				{loveStatements.map((item, idx) => (
 					<Box key={idx}>
@@ -47,16 +55,16 @@ const About = () => {
 			>
 				What do you{" "}
 				<Box
-					color={colorMode === "dark" ? cLightGreen : cGreen}
+					color={colorMode === "dark" ? cLightBlue : cBlue}
 					as="span"
 				>
-					LOVE?
+					LOVE💙?
 				</Box>
 			</Heading>
 			<Box>
 				<Text>Send me a mail</Text>
 				<Text>ojorechris@gmail.com</Text>
-				<Text>I'd love to work with you!</Text>
+				<Text>I'd love💙 to work with you!</Text>
 			</Box>
 		</Box>
 	);
