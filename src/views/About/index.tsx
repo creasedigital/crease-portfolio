@@ -23,10 +23,21 @@ const About = () => {
 
 	return (
 		<Box p={"4rem"}>
+			<Heading
+				fontSize={{ base: "2rem", sm: "2.4rem" }}
+				lineHeight={{ base: "2.4rem", sm: "3.2rem" }}
+				letterSpacing="150%"
+				mb={{ base: "2rem", md: "3.2rem" }}
+			>
+				Let's Talk?
+			</Heading>
 			<Box
-				// color={colorMode === "light" ? "cDarkBg" : "cBlue"}
+				mx="auto"
 				fontSize="2rem"
-				as="span"
+				p={2}
+				mb="4rem"
+				bg={cLightBlue}
+				display="inline-block"
 			>
 				<TypeWriter
 					options={{
@@ -44,21 +55,20 @@ const About = () => {
 
 			<Box>
 				{loveStatements.map((item, idx) => (
-					<Box key={idx}>
+					<Box key={idx} mb="2rem">
 						<Text
-							fontSize={{ base: "2rem", sm: "2.4rem" }}
-							lineHeight={{ base: "2.4rem", sm: "3.2rem" }}
+							fontSize={{ base: "1.6rem", sm: "1.8rem" }}
+							lineHeight={{ base: "2.4rem", sm: "2.6rem" }}
 							letterSpacing="150%"
-							mb={{ base: "2rem", md: "3.2rem" }}
 							data-aos="fade-right"
 						>
 							{item.love}
 						</Text>
 						<Text
-							fontSize={{ base: "2rem", sm: "2.4rem" }}
-							lineHeight={{ base: "2.4rem", sm: "3.2rem" }}
+							fontSize={{ base: "1.2rem", sm: "1.4rem" }}
+							fontWeight="300"
+							lineHeight={{ base: "1.8rem", sm: "2.2rem" }}
 							letterSpacing="150%"
-							mb={{ base: "2rem", md: "3.2rem" }}
 							data-aos="fade-right"
 							data-aos-offset="300"
 							data-aos-easing="ease-in-sine"
@@ -69,26 +79,39 @@ const About = () => {
 				))}
 			</Box>
 			<Heading
-				fontSize={{ base: "4rem", sm: "6.4rem" }}
-				lineHeight={{ base: "4.4rem", sm: "7.2rem" }}
+				fontSize={{ base: "3.2rem", sm: "4.4rem" }}
+				lineHeight={{ base: "3.6rem", sm: "5rem" }}
 				letterSpacing="150%"
 				mb={{ base: "2rem", md: "3.2rem" }}
-				width="100%"
-				maxWidth="1000rem"
 				textAlign="center"
 			>
-				What do you{" "}
+				Hire Me?
 				<Box
 					color={colorMode === "dark" ? cLightBlue : cBlue}
 					as="span"
 				>
-					LOVE💙?
+					💙
 				</Box>
 			</Heading>
 			<Box>
-				<Text>Send me a mail</Text>
-				<Text>ojorechris@gmail.com</Text>
-				<Text>I'd love💙 to work with you!</Text>
+				<Text
+					fontSize={{ base: "2rem", sm: "2.4rem" }}
+					lineHeight={{ base: "2.4rem", sm: "3.2rem" }}
+					letterSpacing="150%"
+					textAlign="center"
+					mb="1rem"
+				>
+					Send me a mail 👇
+				</Text>
+				<Text
+					fontSize={{ base: "2rem", sm: "2.4rem" }}
+					lineHeight={{ base: "2.4rem", sm: "3.2rem" }}
+					letterSpacing="150%"
+					textAlign="center"
+					mb="1rem"
+				>
+					ojorechris@gmail.com 💬
+				</Text>
 			</Box>
 		</Box>
 	);

@@ -40,7 +40,7 @@ const Home = () => {
 		<>
 			<Particles
 				id="tsparticles"
-				init={() => particlesInit}
+				init={particlesInit}
 				loaded={particlesLoaded}
 				options={{
 					background: {

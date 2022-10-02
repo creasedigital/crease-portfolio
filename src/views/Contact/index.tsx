@@ -62,18 +62,16 @@ const Contact = () => {
 			<Box id="contact" mt="2">
 				<List
 					fontSize={{ base: "2rem", sm: "2.4rem" }}
-					fontWeight="100"
+					fontWeight="300"
 				>
 					<ListItem color={cLightBlue} _hover={{ color: cBlue }}>
-						<ListIcon as={TiMail} size={24} />
-						<span>Email: ojorechris@gmail.com</span>
+						Email: ojorechris@gmail.com
 					</ListItem>
 					<ListItem
 						mt="2rem"
 						color={cLightBlue}
 						_hover={{ color: cBlue }}
 					>
-						<ListIcon as={TiDevicePhone} size={24} />
 						Mobile: +2348037598785
 					</ListItem>
 					<ListItem
