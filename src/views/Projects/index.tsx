@@ -32,6 +32,9 @@ const Projects = () => {
 					lineHeight={{ base: "2.4rem", sm: "3.2rem" }}
 					letterSpacing="150%"
 					mb={{ base: "2rem", md: "3.2rem" }}
+					borderBottom={`1px double ${cLightOrangeHover}`}
+					display="inline-block"
+					pb="0.5rem"
 				>
 					Live Projects
 				</Heading>

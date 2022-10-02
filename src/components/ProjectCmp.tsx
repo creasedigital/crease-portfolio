@@ -1,7 +1,18 @@
-import { Box, Heading, Image, Text, Flex, Badge } from "@chakra-ui/react";
+import {
+	Box,
+	Heading,
+	Image,
+	Text,
+	Flex,
+	Badge,
+	Button,
+	useColorMode,
+	Link,
+} from "@chakra-ui/react";
+import Colors from "constants/Colors";
 import { useState } from "react";
 import ReactModal from "react-modal";
-import Button from "./Button";
+// import Button from "./Button";
 
 interface IProjectCmp {
 	id: number;
@@ -40,21 +51,7 @@ const ProjectCmp: React.FC<IProjectCmp> = ({
 	stack,
 	type,
 	key,
-	// openModal,
 }) => {
-	console.log({
-		id,
-		img,
-		title,
-		link,
-		desc,
-		role,
-		stack,
-		type,
-		key,
-		openModal,
-	});
-
 	const [modalIsOpen, setIsOpen] = useState(false);
 
 	let subtitle: any;
@@ -65,18 +62,35 @@ const ProjectCmp: React.FC<IProjectCmp> = ({
 
 	function afterOpenModal() {
 		// references are now sync'd and can be accessed.
-		subtitle.style.backgroundColor = "blue";
+		// subtitle.style.backgroundColor = "blue";
 	}
 
 	function closeModal() {
 		setIsOpen(false);
 	}
 
+	const {
+		cBlueHoverTrans,
+		cBlue,
+		cLightBg,
+		cLightBlue,
+		cDarkBg,
+		cDarkGrey,
+		cPrimary,
+		cGrey,
+		cOrange,
+		cOrangeHover,
+		OrangeHoverTrans,
+		cLightOrange,
+		cLightOrangeHover,
+	} = Colors;
+	const { colorMode } = useColorMode();
+
 	return (
 		<>
 			<Box key={key}>
 				<Image src={img} alt="project" onClick={openModal} />
-				<Box>
+				<Box maxWidth="800px">
 					<Heading>{title}</Heading>
 					<Text>{desc}</Text>
 				</Box>
@@ -95,33 +109,55 @@ const ProjectCmp: React.FC<IProjectCmp> = ({
 						boxSize="20rem"
 						objectFit={"contain"}
 					/>
-					<Text
-						fontSize="3.2rem"
+					<Heading
+						fontSize="2.2rem"
 						textTransform="uppercase"
 						fontWeight="500"
 						letterSpacing="150%"
-						color="green"
+						color="cDarkGrey"
 					>
 						{title}
-					</Text>
+					</Heading>
 					<Text color="black">{desc}</Text>
 					{role && <Text>{role}</Text>}
-					<Flex justifyContent="spaceBetween">
-						<Box>
-							{stack.map((data) => (
-								<Badge>{data}</Badge>
-							))}
-						</Box>
-						<Button>
-							<a
-								href={link}
-								target="_blank"
-								rel="noopener noreferrer"
+					<Box>
+						{stack.map((data, index: number) => (
+							<Badge
+								fontSize="1rem"
+								borderColor={cDarkBg}
+								variant="outline"
+								borderRadius="full"
+								p={{ base: "0.2rem", md: "0.5rem" }}
+								m={{ base: "0.2rem", md: "0.5rem" }}
+								key={index}
 							>
-								View Project
-							</a>
-						</Button>
-					</Flex>
+								{data}
+							</Badge>
+						))}
+					</Box>
+					<Link
+						href={link}
+						target="_blank"
+						rel="noopener noreferrer"
+						variant="outline"
+						color={"white"}
+						fontWeight="100"
+						letterSpacing="150%"
+						padding="0.5rem 1.2rem"
+						backgroundColor={cDarkBg}
+						fontSize={"1.8rem"}
+						textAlign="center"
+						display={{ base: "block", md: "inline-block" }}
+						_hover={{
+							color: cDarkBg,
+							background: "transparent",
+							borderWidth: "2px",
+							borderColor: { cDarkBg },
+						}}
+						// isExternal
+					>
+						View Project
+					</Link>
 				</Box>
 			</ReactModal>
 		</>
