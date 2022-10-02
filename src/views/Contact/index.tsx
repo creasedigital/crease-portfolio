@@ -24,13 +24,19 @@ import SMILES from "assets/svgs/emojione-v1_smiling-face-with-heart-eyes.svg";
 
 const Contact = () => {
 	const {
+		cBlueHoverTrans,
+		cBlue,
 		cLightBg,
 		cLightBlue,
 		cDarkBg,
 		cDarkGrey,
-		cBlue,
-		cGreen,
-		cLightGreen,
+		cPrimary,
+		cGrey,
+		cOrange,
+		cOrangeHover,
+		OrangeHoverTrans,
+		cLightOrange,
+		cLightOrangeHover,
 	} = Colors;
 	const { colorMode } = useColorMode();
 

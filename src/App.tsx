@@ -9,9 +9,9 @@ import Home from "./views/Home";
 import Colors from "constants/Colors";
 
 function App() {
-	const { cLightBg, cDarkBg, cDarkGrey, cLightGreen } = Colors;
+	const { cLightBg, cDarkBg, cDarkGrey, cLightBlue } = Colors;
 	const bg = useColorModeValue(cLightBg, cDarkBg);
-	const color = useColorModeValue(cDarkGrey, cLightGreen);
+	const color = useColorModeValue(cDarkGrey, cLightBlue);
 
 	return (
 		<Box color={color} bg={bg} m="0px">

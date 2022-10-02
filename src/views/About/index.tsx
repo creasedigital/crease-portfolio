@@ -11,13 +11,19 @@ const About = () => {
 		Aos.init({ duration: 2000 });
 	}, []);
 	const {
+		cBlueHoverTrans,
+		cBlue,
 		cLightBg,
 		cLightBlue,
 		cDarkBg,
 		cDarkGrey,
-		cBlue,
-		cGreen,
-		cLightGreen,
+		cPrimary,
+		cGrey,
+		cOrange,
+		cOrangeHover,
+		OrangeHoverTrans,
+		cLightOrange,
+		cLightOrangeHover,
 	} = Colors;
 	const { colorMode } = useColorMode();
 

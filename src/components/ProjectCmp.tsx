@@ -22,12 +22,12 @@ const customStyles = {
 		left: "50%",
 		right: "auto",
 		bottom: "auto",
-		marginRight: "-50%",
+		margin: "0  auto",
 		transform: "translate(-50%, -50%)",
+		width: "60%",
 	},
 };
 
-// Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
 ReactModal.setAppElement("#root");
 
 const ProjectCmp: React.FC<IProjectCmp> = ({
@@ -57,13 +57,15 @@ const ProjectCmp: React.FC<IProjectCmp> = ({
 
 	const [modalIsOpen, setIsOpen] = useState(false);
 
+	let subtitle: any;
+
 	function openModal() {
 		setIsOpen(true);
 	}
 
 	function afterOpenModal() {
 		// references are now sync'd and can be accessed.
-		// subtitle.style.backgroundColor = cDarkGrey;
+		subtitle.style.backgroundColor = "blue";
 	}
 
 	function closeModal() {
@@ -84,11 +86,25 @@ const ProjectCmp: React.FC<IProjectCmp> = ({
 				onAfterOpen={afterOpenModal}
 				onRequestClose={closeModal}
 				style={customStyles}
-				contentLabel="Project Modal"
+				// contentLabel="Example Modal"
 			>
 				<Box>
-					<Heading>{title}</Heading>
-					<Text>{desc}</Text>
+					<Image
+						src={img}
+						alt="project"
+						boxSize="20rem"
+						objectFit={"contain"}
+					/>
+					<Text
+						fontSize="3.2rem"
+						textTransform="uppercase"
+						fontWeight="500"
+						letterSpacing="150%"
+						color="green"
+					>
+						{title}
+					</Text>
+					<Text color="black">{desc}</Text>
 					{role && <Text>{role}</Text>}
 					<Flex justifyContent="spaceBetween">
 						<Box>
