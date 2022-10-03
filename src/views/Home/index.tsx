@@ -13,7 +13,7 @@ import CHRISBW from "assets/imgs/creasebw.png";
 import Colors from "constants/Colors";
 
 import { useCallback } from "react";
-import type { Container, Engine } from "tsparticles-engine";
+import type { Container } from "tsparticles-engine";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
@@ -22,14 +22,12 @@ const Home = () => {
 	const color = useColorModeValue("cDarkGrey", "cBlue");
 	const { colorMode } = useColorMode();
 
-	const particlesInit = useCallback(async (engine: Engine) => {
-		// you can initialize the tsParticles instance (engine) here, adding custom shapes or presets
-		// this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-		// starting from v2 you can add only the features you need reducing the bundle size
-		// await loadFull(engine);
-	}, []);
+	const particlesInit: any = useCallback(
+		async (engine: any) => await loadFull(engine),
+		[],
+	);
 
-	const particlesLoaded = useCallback(
+	const particlesLoaded: any = useCallback(
 		async (container: Container | undefined) => {
 			await console.log("container");
 		},
@@ -40,8 +38,8 @@ const Home = () => {
 		<>
 			<Particles
 				id="tsparticles"
-				init={() => particlesInit}
-				loaded={() => particlesLoaded}
+				init={particlesInit}
+				loaded={particlesLoaded}
 				options={{
 					background: {
 						color: {
